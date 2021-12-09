@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reservation form</title>
+<link rel="stylesheet" href="../css/booking.css" />
+<link rel="stylesheet" href="../css/navbar.css" />
+<script>
+	require([
+		 "jquery",
+		 "mage/calendar"
+	], function($){
+		$("#arrival").calendar({
+			 buttonText:"<?php echo __('Select Date') ?>",
+		});
+	  });
+</script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="home-link">
+				<a href="/index.html" class="logo-link"
+				  >Hotel Chain Management System</a>
+			  </div>
+			<div class="header-right">
+			  <a class="active" href="/index.html">Home</a>
+			  <a href="./user_login.html">Log in</a>
+			  <a href="./user_register.html">Sign Up</a>
+			</div>
+		  </div>
+	  
+	</header>
+	<div class="container">
+		<p><strong>Reserve your room</strong></p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form row aos-init aos-animate" data-aos="fade-up">
+					<div class="col-lg-3">
+                        <div class="input-icon-wrap">
+                            <span class="icon-location">
+                            </span>
+								Location:
+								<input type="text" 
+								class="form-control flatpickr-input"
+								name="location" 
+								id="location"
+								>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-icon-wrap">
+                            <span class="icon-calendar">
+                            </span>
+							<form action="post">Arrival Date:<input type="date" class="form-control flatpickr-input" name="" value=""></form>
+                        </div>
+                    </div>
+					<div>
+					</div>
+                    <div class="col-lg-3">
+                        <div class="input-icon-wrap">
+                            <span class="icon-calendar">
+                            </span>
+							<form action="post">Departure Date:<input type="date" class="form-control flatpickr-input" name="" value=""></form>
+                        </div>
+                    </div>
+					<div class="col-lg-3">
+                        <div class="input-icon-wrap">
+                            <span class="icon-person">
+                            </span>
+							<div># of Person:</div>
+							<select name id="number-of-person" class="form-control">
+								<option value>Select...</option>
+								<option value>1</option>
+								<option value>2</option>
+								<option value>3</option>
+								<option value>4</option>
+								<option value>5+</option>
+							</select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="col">
+			<div class="col-lg-3">
+					<a class="btn btn-primary btn-block w-100" href="./rooms_from_database.html">Find Now</a>				
+					<span class></span>
+				</button>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

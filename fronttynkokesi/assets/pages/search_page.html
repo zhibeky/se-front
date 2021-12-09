@@ -1,0 +1,186 @@
+body {
+    background-color: #b7d7e8;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.79), rgba(4, 9, 30, 0.79)),
+    url(../images/homepage-background.png);
+    /* border: 3px solid green; */
+  }
+  h2 {
+    margin-left: 25px; 
+    /* border: 3px solid green; */
+  }
+  header {
+    /* border: 3px solid red; */
+    height: 50px;
+    /* background-color: #b7d7e8;
+    width: 300px;
+    margin: 100px 100px 100px 0px;
+    float: left; */
+  }
+  .container {
+    height: 80%;
+    background-color: #87bdd8;
+    margin-top: 100px;
+    /* margin-left: 400px; */
+    padding: 50px;
+    width: 100%;
+  }
+  .btn {
+    background-color: #b7d7e8;
+    border: none;
+    margin: 20px 40px 20px 40px;
+    border-radius: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    width: 100%;
+  }
+  .form-group {
+    margin-left: 15px;
+    border: none;
+    font-family: "Times New Roman", Times, serif;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  label {
+    /* border: 3px solid red; */
+    margin: 0px;
+  }
+  input[type=text] {
+    border: 2px solid #b7d7e8;
+    border-radius: 4px;
+  }
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .res {
+    list-style-type: none;
+    margin: 50px 10px 0px 10px;
+    /* padding: 5px; */
+    width: 300px;
+  }
+  a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+  }
+  .home {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid white;
+  }
+  a:hover {
+    background-color: #87bdd8;
+    color: black;
+  }
+  a:link {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+  }
+  a.harvard {
+      color: maroon;
+  }
+  
+  
+  .nav-list ul li a {
+    /* text-decoration: none; */
+    font-size: 16px;
+  }
+  .header-flex a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .home-link a {
+    font-size: 18px;
+  }
+  @media (max-width: 800px) {
+    div {
+        background-color: #87bdd8;
+        box-sizing: border-box;
+        width: 50%;
+        justify-content: space-around;
+      }
+      h2 {
+        margin: 0;
+      }
+      .form-group {
+        margin-left: 0px;
+      }
+      input[type=submit] {
+        background-color: #b7d7e8;
+        border: none;
+        margin: 0;
+        /* margin: 20px 40px 20px 40px; */
+        border-radius: 15px;
+        /* padding: 10px 50px 10px 50px; */
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        width: 100%;
+      }
+      input[type=text] {
+        border: 2px solid #b7d7e8;
+        border-radius: 4px;
+        width: 100%;
+      }
+      input[type=password] {
+        border: 2px solid #b7d7e8;
+        border-radius: 4px;
+        width: 100%;
+      }      
+}
+
+
+
+<div class="container col-md-5">
+    <div class="card">
+        <div class="card-body">
+            <c:if test="${user != null}"><form action="update" method="post"></c:if>
+            <c:if test="${user == null}"><form action="insert" method="post"></c:if>
+
+            <caption>
+                <h2>
+                    <!-- <c:if test="${user != null}">Edit Reservation</c:if> -->
+                    <c:if test="${user == null}">Add New Reservation</c:if>
+                </h2>
+            </caption>
+
+            <c:if test="${user != null}">
+                <input type="hidden" name="id" />
+            </c:if>
+
+            <fieldset class="form-group">
+                <label>User Name</label> <input type="text" class="form-control"
+                    name="name" required="required">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>User Email</label> <input type="text" class="form-control"
+                    name="email">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>User Country</label> <input type="text" class="form-control"
+                    name="country">
+            </fieldset>
+
+            <a href="/index.html"><button type="submit" class="btn btn-success">Save</button></a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+body {
+    background-color: #b7d7e8;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    font-family: "Times New Roman", Times, serif;
+    justify-content: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.79), rgba(4, 9, 30, 0.79)),
+    url(../images/homepage-background.png);
+  }
+  div2 {
+    background-color: #87bdd8;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 400px;
+    box-sizing: border-box;
+    width: 50%;
+    justify-content: space-around;
+  }
+  table {
+    width: 100%;
+  }
+  td {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+  }
+  input[type=submit] {
+    background-color: #b7d7e8;
+    border: none;
+    margin: 20px 40px 20px 40px;
+    border-radius: 15px;
+    padding: 10px 50px 10px 50px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    width: 50%;
+  }
+
+  input[type=text] {
+    border: 2px solid #b7d7e8;
+    border-radius: 4px;
+  }
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  input[type=password] {
+    border: 2px solid #b7d7e8;
+    border-radius: 4px;
+  }
+  input[type=password]:focus {
+    border: 3px solid #555;
+  }
+  a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+  }
+  .home {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid white;
+  }
+  a:hover {
+    background-color: #87bdd8;
+    color: black;
+  }
+  .signup {
+    width: 200px;
+  }
+  .signup:hover {
+    background-color: white;
+    /* width: 100%; */
+  }
+  a:link {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+  }
+@media (max-width: 800px) {
+    div {
+        background-color: #87bdd8;
+        box-sizing: border-box;
+        width: 50%;
+        justify-content: space-around;
+      }
+      input[type=submit] {
+        background-color: #b7d7e8;
+        border: none;
+        margin: 0;
+        /* margin: 20px 40px 20px 40px; */
+        border-radius: 15px;
+        /* padding: 10px 50px 10px 50px; */
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        width: 100%;
+      }
+      input[type=text] {
+        border: 2px solid #b7d7e8;
+        border-radius: 4px;
+        width: 100%;
+      }
+      input[type=password] {
+        border: 2px solid #b7d7e8;
+        border-radius: 4px;
+        width: 100%;
+      }      
+}

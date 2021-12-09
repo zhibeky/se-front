@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<link rel="stylesheet" href="../css/user_login.css">
+
+</head>
+<body>
+  <header>
+		<div class="header">
+			<link rel="stylesheet" href="../css/navbar.css">
+			<div class="home-link">
+				<a href="/index.html" class="logo-link"
+				  >Hotel Chain Management System</a>
+			  </div>
+			<div class="header-right">
+			  <a class="active" href="/index.html">Home</a>
+			  <a href="./user_login.html">Log in</a>
+			  <a href="./user_register.html">Sign Up</a>
+			</div>
+		  </div>
+	</header>
+	<div2>
+  <h1>User Register Form</h1>
+  <!-- <form action="<%= request.getContextPath() %>/register" method="post"> -->
+   <table>
+    <tr>
+     <td>UserName</td>
+     <td><input type="text" name="username" /></td>
+    </tr>
+    <tr>
+     <td>Password</td>
+     <td><input type="password" name="password" /></td>
+    </tr>
+    <tr>
+    <tr>
+     <td>Identification Type</td>
+     <td><input type="text" name="ident_type" /></td>
+    </tr>
+    <tr>
+    <tr>
+     <td>Identification Number</td>
+     <td><input type="text" name="ident_number" /></td>
+    </tr>
+    <tr>
+     <td>Address</td>
+     <td><input type="text" name="address" /></td>
+    </tr>
+    <tr>
+     <td>Home Number</td>
+     <td><input type="text" name="home_phone" /></td>
+    </tr>
+    <tr>
+     <td>Mobile Number</td>
+     <td><input type="text" name="mobile_phone" /></td>
+    </tr>
+   </table>
+   <a href="signup_success.html"><input type="submit" value="Sign Up" /></a>
+   <!-- <a class="signup" href="./user_login.html">Back</a> -->
+  </form>
+ </div2>
+ <p>
+  <!-- <a class="home" href="/index.html">HOME</a> -->
+</p>
+</body>
+</html>

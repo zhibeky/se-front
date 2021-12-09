@@ -1,0 +1,10 @@
+body {
+    background-color: #b7d7e8;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.79), rgba(4, 9, 30, 0.79)),
+    url(../images/homepage-background.png);
+}
